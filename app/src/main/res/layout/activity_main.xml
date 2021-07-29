@@ -4,48 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layoutDescription="@xml/scene_01"
-    tools:context=".MainActivity">
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showPaths="true">
 
-    <View
-        android:id="@+id/button1"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:maxLines="1"
+        android:padding="18dp"
+        android:text="@string/someText"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ready_for_delivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/button2"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
+    <TextView
+        android:id="@+id/ready_for_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:drawablePadding="10dp"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:text="@string/ready_for_delivery"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_baseline_check_circle_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/button3"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
-
-    <View
-        android:id="@+id/button4"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
-
-    <View
-        android:id="@+id/button5"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
-
-    <View
-        android:id="@+id/button6"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
-
-    <View
-        android:id="@+id/button7"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
-
-    <View
-        android:id="@+id/button8"
-        android:layout_width="32dp"
-        android:layout_height="32dp" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
